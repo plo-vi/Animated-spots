@@ -1,13 +1,13 @@
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
-canvas.heigth = window.innerHeight;
+canvas.height = window.innerHeight;
 const particleArray = [];
 let hue = 0;
 
 window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
-    canvas.heigth = window.innerHeight;
+    canvas.height = window.innerHeight;
     //ctx.fillStyle = 'white'; for rectungle, dublicating inside the function
     //ctx.fillRect(10, 10, 450, 50);
 })
