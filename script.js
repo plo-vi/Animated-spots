@@ -1,13 +1,13 @@
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
-canvas.heigth = window.innerHeight;
+canvas.height = window.innerHeight;
 const particleArray = [];
 let hue = 0;
 
 window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
-    canvas.heigth = window.innerHeight;
+    canvas.height = window.innerHeight;
     //ctx.fillStyle = 'white'; for rectungle, dublicating inside the function
     //ctx.fillRect(10, 10, 450, 50);
 })
@@ -106,11 +106,11 @@ function handleParticles(){
 }
 
 function animate(){
-    ctx.clearRect(0, 0, canvas.width, canvas.heigth);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     //ctx.fillStyle = 'rgba(0,0,0,0.01';
-    //ctx.fillRect(0, 0, canvas.width, canvas.heigth);
+    //ctx.fillRect(0, 0, canvas.width, canvas.height);
     handleParticles();
-    hue+=2;
+    hue+=0.2;
     requestAnimationFrame(animate);
 }
 
